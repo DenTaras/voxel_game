@@ -8,6 +8,7 @@ from player import Player
 from textures import Textures
 
 
+
 class VoxelEnige:
     def __init__(self):
         pg.init()
@@ -39,6 +40,7 @@ class VoxelEnige:
         self.player = Player(self)
         self.shader_program = ShaderProgram(self)
         self.scene = Scene(self)
+        # self.scene = Cube(self)
 
     def update(self):
         self.player.update()
