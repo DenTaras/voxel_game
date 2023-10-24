@@ -7,6 +7,8 @@ class ShaderProgram:
         self.player = app.player
         # --------- shaders ------------ #
         self.chunk = self.get_program(shader_name='chunk')
+        self.quad = self.get_program(shader_name='quad')
+        self.default = self.get_program(shader_name='default')
         # ------------------------------ #
         self.set_uniforms_on_init()
 
@@ -15,8 +17,13 @@ class ShaderProgram:
         self.chunk['m_model'].write(glm.mat4())
         self.chunk['u_texture_0'] = 0
 
+        self.quad['m_proj'].write(self.player.m_proj)
+        self.quad['m_model'].write(glm.mat4())
+
     def update(self):
         self.chunk['m_view'].write(self.player.m_view)
+
+        self.quad['m_view'].write(self.player.m_view)
 
     def get_program(self, shader_name):
         with open(f'shaders/{shader_name}.vert') as file:

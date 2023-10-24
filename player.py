@@ -24,6 +24,8 @@ class Player(Camera):
     def keyboard_control(self):
         key_state = pg.key.get_pressed()
         vel = PLAYER_SPEED * self.app.delta_time
+        if key_state[pg.K_LSHIFT]:
+            vel *= 5
         if key_state[pg.K_w]:
             self.move_forward(vel)
         if key_state[pg.K_s]:
