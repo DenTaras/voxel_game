@@ -7,7 +7,6 @@ class Scene:
     def __init__(self, app):
         self.app = app
         self.world = World(self.app)
-        # self.quad = QuadMesh(self.app)
         self.cube = Cube(self.app)
 
     def update(self):
@@ -16,5 +15,4 @@ class Scene:
 
     def render(self):
         self.world.render()
-        # self.quad.render()
         self.cube.render()

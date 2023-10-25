@@ -1,6 +1,6 @@
 #version 330 core
 
-layout (location = 0) in uint packed_data;
+layout (location = 1) in uint packed_data;
 
 int x, y, z;
 int voxel_id;

@@ -21,7 +21,7 @@ class VoxelEnige:
         self.ctx = mgl.create_context()
 
         self.ctx.enable(flags=mgl.DEPTH_TEST
-                              # | mgl.CULL_FACE отрисовка обратной стороны грани
+                              #| mgl.CULL_FACE #отрисовка обратной стороны грани
                               | mgl.BLEND)
         self.ctx.gc_mode = 'auto'
 
@@ -40,7 +40,7 @@ class VoxelEnige:
         self.player = Player(self)
         self.shader_program = ShaderProgram(self)
         self.scene = Scene(self)
-        # self.scene = Cube(self)
+
 
     def update(self):
         self.player.update()

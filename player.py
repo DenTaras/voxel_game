@@ -4,7 +4,7 @@ from settings import *
 
 
 class Player(Camera):
-    def __init__(self, app, position=PLAYER_POS, yaw=-90, pitch=0):
+    def __init__(self, app, position=PLAYER_POS, yaw=50, pitch=-40):
         self.app = app
         super().__init__(position, yaw, pitch)
 

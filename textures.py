@@ -8,11 +8,11 @@ class Textures:
         self.ctx = app.ctx
 
         # load texture
-        self.texture_0 = self.load('frame.png')
+        self.texture_1 = self.load('frame.png')
         # self.texture_0 = self.load('test.png')
 
         # assign texture unit
-        self.texture_0.use(location=0)
+        self.texture_1.use(location=0)
 
     def load(self, file_name):
         texture = pg.image.load(f'assets/{file_name}')
