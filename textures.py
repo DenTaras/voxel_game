@@ -9,7 +9,7 @@ class Textures:
 
         # load texture
         self.texture_1 = self.load('frame.png')
-        # self.texture_0 = self.load('test.png')
+        # self.texture_1 = self.load('test.png')
 
         # assign texture unit
         self.texture_1.use(location=0)
