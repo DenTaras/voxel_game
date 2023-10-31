@@ -7,6 +7,9 @@ import math
 WIN_RES = glm.vec2(1600, 900)
 FPS = 240
 
+# world generator
+SEED = 16
+
 # ray casting
 MAX_RAY_DIST = 6
 
@@ -15,7 +18,7 @@ CHUNK_SIZE = 32
 H_CHUNK_SIZE = CHUNK_SIZE // 2
 CHUNK_AREA = CHUNK_SIZE * CHUNK_SIZE
 CHUNK_VOL = CHUNK_AREA * CHUNK_SIZE
-CHUNK_SPHERE_RADIUS = H_CHUNK_SIZE * math.sqrt(3)
+CHUNK_SPHERE_RADIUS = H_CHUNK_SIZE * math.sqrt(3) * 2
 
 # world
 WORLD_W, WORLD_H = 4, 2
