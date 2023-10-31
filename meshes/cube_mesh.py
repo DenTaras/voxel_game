@@ -11,13 +11,13 @@ class CubeMesh(BaseMesh):
         self.program = self.app.shader_program.voxel_marker
 
         self.vbo_format = '2f2 3f2'
-        self.attrs = ('in_tex_coord_0', 'in_position',)
+        self.attrs = ('in_tex_coord_0', 'in_position')
         self.vao = self.get_vao()
 
     @staticmethod
     def get_data(vertices, indices):
         data = [vertices[ind] for triangle in indices for ind in triangle]
-        return np.array(data, dtype='f16')
+        return np.array(data, dtype='float16')
 
     def get_vertex_data(self):
         # форма объекта

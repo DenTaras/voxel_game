@@ -15,7 +15,7 @@ class VoxelHandler:
         self.voxel_world_pos = None
         self.voxel_normal = None
 
-        self.interaciton_mode = 0 # 0: remove voxel   1: add voxel
+        self.interaction_mode = 0 # 0: remove voxel   1: add voxel
         self.new_voxel_id = 1
 
     def add_voxel(self):
@@ -65,13 +65,13 @@ class VoxelHandler:
             self.rebuild_adjacent_cnunks()
 
     def set_voxel(self):
-        if self.interaciton_mode:
+        if self.interaction_mode:
             self.add_voxel()
         else:
             self.remove_voxel()
 
     def switch_mode(self):
-        self.interaciton_mode = not self.interaciton_mode
+        self.interaction_mode = not self.interaction_mode
 
     def update(self):
         self.ray_cast()
