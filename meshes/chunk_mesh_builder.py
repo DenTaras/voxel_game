@@ -2,6 +2,7 @@ from settings import *
 from numba import uint8
 
 
+
 @njit
 def get_ao(local_pos, world_pos, world_voxels, plane):
     x, y, z = local_pos
